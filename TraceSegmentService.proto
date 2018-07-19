@@ -46,6 +46,7 @@ message TraceSegmentObject {
     int32 applicationId = 3;
     int32 applicationInstanceId = 4;
     bool isSizeLimited = 5;
+    string userId = 6;
 }
 
 message TraceSegmentReference {
