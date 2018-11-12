@@ -40,6 +40,8 @@ message JVMMetric {
     repeated Memory memory = 3;
     repeated MemoryPool memoryPool = 4;
     repeated GC gc = 5;
+    repeated ConnPool connPool = 6;
+    repeated ThreadPool threadPool = 7;
 }
 
 message CPU {
@@ -80,4 +82,17 @@ message GC {
 enum GCPhrase {
     NEW = 0;
     OLD = 1;
+}
+
+message ConnPool {
+	string poolName = 1;
+ 	int64 max = 2;
+    int64 active = 3;
+}
+
+message ThreadPool {
+	string poolName = 1;
+    int64 current = 2;
+ 	int64 max = 3;
+    int64 busy = 4;
 }
